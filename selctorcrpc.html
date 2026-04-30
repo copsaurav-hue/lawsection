@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNSS Navigator</title>
+    
+    <!-- Modern Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --accent-blue: #38bdf8;
+            --card-bg: rgba(30, 41, 59, 0.6);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        /* RESET & GLOBAL */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            /* Soft gradient overlay to simulate depth */
+            background-image: 
+                radial-gradient(at 50% 0%, rgba(56, 189, 248, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(37, 99, 235, 0.05) 0px, transparent 50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-main);
+        }
+
+        /* MAIN WRAPPER */
+        .blk {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            width: 100%;
+            max-width: 450px;
+            padding: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            width: 100%;
+        }
+
+        /* MODERN BUTTON STYLE */
+        .btn {
+            width: 100%;
+            padding: 28px 24px;
+            border-radius: 28px;
+            border: 1px solid var(--card-border);
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-align: center;
+            color: var(--text-main);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* INTERACTION */
+        .btn:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: var(--accent-blue);
+            background: rgba(30, 41, 59, 0.8);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        /* TEXT HIERARCHY */
+        .btn-title {
+            display: block;
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+            color: #fff;
+        }
+
+        .btn-subtitle {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--accent-blue);
+            opacity: 0.9;
+        }
+
+        /* LOGO/ICON PLACEHOLDER */
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            background: rgba(56, 189, 248, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--accent-blue);
+        }
+
+        /* MOBILE FIX */
+        @media (max-width: 480px) {
+            .blk { width: 92%; }
+            .btn-title { font-size: 15px; }
+            .btn-subtitle { font-size: 13px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blk">
+        
+        <a href="togbnssF.html">
+            <button class="btn">
+                <div class="icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
+                <span class="btn-title">Search By Keyword in BNSS, 2023</span>
+                <span class="btn-subtitle">keyword द्वारा अपराध की धारा खोजें BNSS, 2023 में</span>
+            </button>
+        </a>
+
+        <a href="selectcrpcconv.html">
+            <button class="btn">
+                <div class="icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"></path><path d="M8 3H3v5"></path><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.828L3 3"></path><path d="m21 3-7.828 7.828A4 4 0 0 0 12 13.7V22"></path></svg>
+                </div>
+                <span class="btn-title">CrPC Section to BNSS, 2023</span>
+                <span class="btn-subtitle">CrPC के पुराने धारा के लिए BNSS, 2023 में नया धारा खोजें</span>
+            </button>
+        </a>
+
+    </div>
+
+</body>
+</html>

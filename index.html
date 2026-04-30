@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanhita - Portal</title>
+    
+    <!-- Modern Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* High-Contrast Professional Palette */
+            --bg-light: #f8fafc;
+            --accent-blue: #1d4ed8;
+            --card-bg: rgba(255, 255, 255, 0.96);
+            --card-border: #e2e8f0;
+            --text-header: #0f172a;
+            --text-body: #334155;
+            --btn-shadow: rgba(29, 78, 216, 0.2);
+        }
+
+        /* GLOBAL STYLES */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-body);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-light);
+            
+            /* CENTERED LOGO BACKGROUND */
+            background-image: url('https://yt3.googleusercontent.com/z5GtKCdDrLqaRlYHvSwWCADBDYWFt8lyJ54N5mfRk9SMA6QyZjeHJe8XNsQ9s6lWOwva8KM2=s160-c-k-c0x00ffffff-no-rj');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: 300px; /* Adjust size of the central logo */
+            position: relative;
+        }
+
+        /* Soft white overlay to keep the background logo subtle and text readable */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(248, 250, 252, 0.88); 
+            z-index: -1;
+        }
+
+        /* HEADER SECTION */
+        header {
+            margin-bottom: 40px;
+            padding: 0 20px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        h3 {
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent-blue);
+            margin: 0;
+        }
+
+        .main-title {
+            font-size: 38px;
+            margin-top: 12px;
+            font-weight: 800;
+            color: var(--text-header);
+            letter-spacing: -1.5px;
+        }
+
+        /* BUTTON CONTAINER */
+        .btn-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 100%;
+            max-width: 460px;
+            padding: 20px;
+            z-index: 10;
+        }
+
+        a {
+            text-decoration: none;
+            width: 100%;
+        }
+
+        /* HIGH-VISIBILITY MODERN BUTTONS */
+        .btn {
+            width: 100%;
+            padding: 28px 24px;
+            border-radius: 24px;
+            border: 2px solid var(--card-border);
+            background: var(--card-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            cursor: pointer;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--accent-blue);
+            background: #ffffff;
+            box-shadow: 0 25px 30px -10px var(--btn-shadow);
+        }
+
+        .btn-eng {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-header);
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .btn-hin {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent-blue);
+            text-align: center;
+        }
+
+        /* DECORATIVE ACCENT */
+        .btn::after {
+            content: '';
+            position: absolute;
+            bottom: 12px;
+            width: 40px;
+            height: 4px;
+            background: var(--accent-blue);
+            border-radius: 10px;
+            opacity: 0.3;
+            transition: opacity 0.3s;
+        }
+
+        .btn:hover::after {
+            opacity: 1;
+        }
+
+        @media (max-width: 480px) {
+            .main-title { font-size: 28px; }
+            .btn { padding: 22px; border-radius: 20px; }
+            .btn-eng { font-size: 15px; }
+            .btn-hin { font-size: 14px; }
+            body { background-size: 200px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h3>Smart Cyber Cops</h3>
+        <div class="main-title">Digital Portal</div>
+    </header>
+
+    <div class="btn-wrapper">
+
+        <a href="selectoripc.html">
+            <button class="btn">
+                <span class="btn-eng">Bhartiya Nyay Sanhita, 2023</span>
+                <span class="btn-hin">भारतीय न्याय संहिता, 2023</span>
+            </button>
+        </a>
+
+        <a href="selctorcrpc.html">
+            <button class="btn">
+                <span class="btn-eng">Bhartiya Nagrik Suraksha Sanhita, 2023</span>
+                <span class="btn-hin">भारतीय नागरिक सुरक्षा संहिता, 2023</span>
+            </button>
+        </a>
+
+        <a href="selectorevi.html">
+            <button class="btn">
+                <span class="btn-eng">Bhartiya Sakshya Adhiniyam, 2023</span>
+                <span class="btn-hin">भारतीय साक्ष्य अधिनियम, 2023</span>
+            </button>
+        </a>
+
+    </div>
+
+</body>
+</html>

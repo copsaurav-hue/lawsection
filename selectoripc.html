@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNS Dashboard - Samhita</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #eef8ff;
+            --primary-blue: rgb(2, 110, 241);
+            --dark-blue: rgb(3, 60, 125);
+            --text-main: #1e293b;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            color: var(--text-main);
+
+            /* --- CENTERED LOGO WATERMARK --- */
+            background-image: url('https://yt3.googleusercontent.com/z5GtKCdDrLqaRlYHvSwWCADBDYWFt8lyJ54N5mfRk9SMA6QyZjeHJe8XNsQ9s6lWOwva8KM2=s160-c-k-c0x00ffffff-no-rj');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: 350px;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            width: 90%;
+            max-width: 1100px;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        /* Overlay to keep text readable over logo */
+        .main-content::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(238, 248, 255, 0.88);
+            z-index: -1;
+        }
+
+        .dashboard-header {
+            margin-bottom: 60px;
+        }
+
+        .dashboard-header h1 {
+            font-size: 36px;
+            font-weight: 800;
+            margin: 0;
+            font-style: italic;
+            color: #0f172a;
+        }
+
+        .dashboard-header p {
+            color: #64748b;
+            font-size: 14px;
+            margin-top: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Dashboard Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            justify-items: center;
+        }
+
+        /* DASHBOARD CARD */
+        .dash-card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            border: 4px solid rgb(0, 6, 8);
+            border-radius: 40px;
+            padding: 40px 30px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        .dash-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 40px -10px rgba(2, 110, 241, 0.2);
+            border-color: var(--primary-blue);
+        }
+
+        .card-icon {
+            background-color: var(--primary-blue);
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 15px rgba(2, 110, 241, 0.3);
+        }
+
+        .card-title {
+            color: #0f172a;
+            font-weight: 800;
+            font-size: 20px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .card-hindi {
+            color: #475569;
+            font-size: 16px;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        @media (max-width: 480px) {
+            .dashboard-header h1 { font-size: 28px; }
+            .dash-card { padding: 30px 20px; }
+            .card-title { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="main-content">
+        <header class="dashboard-header">
+            <h1>BNS, 2023 Dashboard</h1>
+            <p>Smart Cyber Cops Digital Bridge</p>
+        </header>
+
+        <div class="grid-container">
+            <!-- Card 1 -->
+            <a href="togbnsF2.html" class="dash-card">
+                <div class="card-icon">
+                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
+                <div class="card-title">Search By Keyword in BNS, 2023</div>
+                <div class="card-hindi">keyword द्वारा अपराध की प्रासंगिक धारा BNS, 2023 में खोजें</div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="Selectipcconv2.html" class="dash-card">
+                <div class="card-icon">
+                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"></path></svg>
+                </div>
+                <div class="card-title">IPC Section to BNS, 2023</div>
+                <div class="card-hindi">IPC के पुराने धारा के लिए BNS, 2023 में नया धारा खोजें</div>
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>
